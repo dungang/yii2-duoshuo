@@ -62,7 +62,6 @@ class Thread extends DuoShuo
      */
     public function renderWidget()
     {
-        $this->url = Url::to($this->url, true);
         return Html::tag('div', '', [
             'class' => 'ds-thread',
             'data-thead-key' => $this->id,

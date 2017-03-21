@@ -14,16 +14,34 @@ use yii\helpers\Html;
  */
 class RecentComments extends DuoShuo
 {
+    /**
+     * @var int 显示最新评论的条数，最大支持200条
+     */
     public $numItems = 5;
 
+    /**
+     * @var int 是否显示头像，1：显示，0：不显示
+     */
     public $showAvatars = 1;
 
+    /**
+     * @var int 是否显示时间，1：显示，0：不显示
+     */
     public $showTime = 1;
 
+    /**
+     * @var int 是否显示标题，1：显示，0：不显示
+     */
     public $showTitle = 1;
 
+    /**
+     * @var int 是否显示管理员的评论，1：显示，0：不显示
+     */
     public $showAdmin = 1;
 
+    /**
+     * @var int 最大显示评论汉字数
+     */
     public $excerptLength = 70;
 
     /**
