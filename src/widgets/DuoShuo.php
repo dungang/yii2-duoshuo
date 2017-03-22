@@ -13,7 +13,7 @@ use yii\base\Widget;
 use yii\helpers\Url;
 use yii\web\View;
 
-class DuoShuo extends Widget
+abstract class DuoShuo extends Widget
 {
 
     /**
@@ -34,14 +34,11 @@ class DuoShuo extends Widget
             (document.getElementsByTagName(\'head\')[0]
             || document.getElementsByTagName(\'body\')[0]).appendChild(ds);
         })();
-    ',View::POS_READY,'duoshuo');
+    ',View::POS_END,'duoshuo');
         return $this->renderWidget();
     }
 
-    public function renderWidget()
-    {
-        return '';
-    }
+    public abstract function renderWidget();
 
 
 }
